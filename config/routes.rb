@@ -5,5 +5,11 @@ Rails.application.routes.draw do
   # get "/articles", to: "articles#index"
   # get "/articles/:id", to: "articles#show"
 
-  resources :articles
+  # with only 1 model
+  # resources :articles
+
+  # with multiple models and associations
+  resources :articles do
+    resources :comments
+  end
 end
