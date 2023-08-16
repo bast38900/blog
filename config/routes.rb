@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   root "articles#index"
 
-  get "/articles", to: "articles#index"
-  get "/articles/new", to: "articles#show"
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  # old routes
+  # get "/articles", to: "articles#index"
+  # get "/articles/:id", to: "articles#show"
 
-  # Defines the root path route ("/")
+  resources :articles
 end
